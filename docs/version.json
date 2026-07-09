@@ -1,7 +1,7 @@
 {
   "latestVersion": "1.2.0",
   "versionCode": 3,
-  "changelog": "Test update\n- Fixed statistics panel display",
+  "changelog": "Test update - fixed statistics display",
   "downloadUrl": "https://github.com/ucidtft/bookkeeping0709/releases/download/v1.1.0/app-v1.1.0.apk",
   "forceUpdate": false
 }
