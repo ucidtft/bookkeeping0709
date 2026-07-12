@@ -1,1 +1,55 @@
-77u/cGx1Z2lucyB7DQogICAgaWQoImNvbS5hbmRyb2lkLmFwcGxpY2F0aW9uIikNCiAgICBpZCgib3JnLmpldGJyYWlucy5rb3RsaW4uYW5kcm9pZCIpDQogICAgaWQoImNvbS5nb29nbGUuZGV2dG9vbHMua3NwIikNCn0NCmFuZHJvaWQgew0KICAgIG5hbWVzcGFjZSA9ICJjb20ueW91cmFwcC5hY2NvdW50Ym9vayINCiAgICBjb21waWxlU2RrID0gMzQNCiAgICBkZWZhdWx0Q29uZmlnIHsNCiAgICAgICAgYXBwbGljYXRpb25JZCA9ICJjb20ueW91cmFwcC5hY2NvdW50Ym9vayINCiAgICAgICAgbWluU2RrID0gMjYNCiAgICAgICAgdGFyZ2V0U2RrID0gMzQNCiAgICAgICAgdmVyc2lvbkNvZGUgPSAxDQogICAgICAgIHZlcnNpb25OYW1lID0gIjEuMC4wIg0KICAgIH0NCiAgICBidWlsZFR5cGVzIHsNCiAgICAgICAgcmVsZWFzZSB7DQogICAgICAgICAgICBpc01pbmlmeUVuYWJsZWQgPSBmYWxzZQ0KICAgICAgICAgICAgcHJvZ3VhcmRGaWxlcyhnZXREZWZhdWx0UHJvZ3VhcmRGaWxlKCJwcm9ndWFyZC1hbmRyb2lkLW9wdGltaXplLnR4dCIpLCAicHJvZ3VhcmQtcnVsZXMucHJvIikNCiAgICAgICAgfQ0KICAgIH0NCiAgICBjb21waWxlT3B0aW9ucyB7DQogICAgICAgIHNvdXJjZUNvbXBhdGliaWxpdHkgPSBKYXZhVmVyc2lvbi5WRVJTSU9OXzE3DQogICAgICAgIHRhcmdldENvbXBhdGliaWxpdHkgPSBKYXZhVmVyc2lvbi5WRVJTSU9OXzE3DQogICAgfQ0KICAgIGtvdGxpbk9wdGlvbnMgew0KICAgICAgICBqdm1UYXJnZXQgPSAiMTciDQogICAgfQ0KICAgIGJ1aWxkRmVhdHVyZXMgew0KICAgICAgICB2aWV3QmluZGluZyA9IHRydWUNCiAgICB9DQp9DQpkZXBlbmRlbmNpZXMgew0KICAgIGltcGxlbWVudGF0aW9uKCJhbmRyb2lkeC5jb3JlOmNvcmUta3R4OjEuMTIuMCIpDQogICAgaW1wbGVtZW50YXRpb24oImFuZHJvaWR4LmFwcGNvbXBhdDphcHBjb21wYXQ6MS42LjEiKQ0KICAgIGltcGxlbWVudGF0aW9uKCJjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWw6bWF0ZXJpYWw6MS4xMS4wIikNCiAgICBpbXBsZW1lbnRhdGlvbigiYW5kcm9pZHguY29uc3RyYWludGxheW91dDpjb25zdHJhaW50bGF5b3V0OjIuMS40IikNCiAgICBpbXBsZW1lbnRhdGlvbigiYW5kcm9pZHgubmF2aWdhdGlvbjpuYXZpZ2F0aW9uLWZyYWdtZW50LWt0eDoyLjcuNyIpDQogICAgaW1wbGVtZW50YXRpb24oImFuZHJvaWR4Lm5hdmlnYXRpb246bmF2aWdhdGlvbi11aS1rdHg6Mi43LjciKQ0KICAgIGltcGxlbWVudGF0aW9uKCJhbmRyb2lkeC5saWZlY3ljbGU6bGlmZWN5Y2xlLXZpZXdtb2RlbC1rdHg6Mi43LjAiKQ0KICAgIGltcGxlbWVudGF0aW9uKCJhbmRyb2lkeC5saWZlY3ljbGU6bGlmZWN5Y2xlLWxpdmVkYXRhLWt0eDoyLjcuMCIpDQogICAgaW1wbGVtZW50YXRpb24oImFuZHJvaWR4LmxpZmVjeWNsZTpsaWZlY3ljbGUtcnVudGltZS1rdHg6Mi43LjAiKQ0KICAgIGltcGxlbWVudGF0aW9uKCJhbmRyb2lkeC5yb29tOnJvb20tcnVudGltZToyLjYuMSIpDQogICAgaW1wbGVtZW50YXRpb24oImFuZHJvaWR4LnJvb206cm9vbS1rdHg6Mi42LjEiKQ0KICAgIGtzcCgiYW5kcm9pZHgucm9vbTpyb29tLWNvbXBpbGVyOjIuNi4xIikNCiAgICBpbXBsZW1lbnRhdGlvbigiY29tLnNxdWFyZXVwLnJldHJvZml0MjpyZXRyb2ZpdDoyLjkuMCIpDQogICAgaW1wbGVtZW50YXRpb24oImNvbS5zcXVhcmV1cC5yZXRyb2ZpdDI6Y29udmVydGVyLWdzb246Mi45LjAiKQ0KICAgIGltcGxlbWVudGF0aW9uKCJjb20uc3F1YXJldXAub2todHRwMzpva2h0dHA6NC4xMi4wIikNCiAgICBpbXBsZW1lbnRhdGlvbigiY29tLnNxdWFyZXVwLm9raHR0cDM6bG9nZ2luZy1pbnRlcmNlcHRvcjo0LjEyLjAiKQ0KICAgIGltcGxlbWVudGF0aW9uKCJvcmcuamV0YnJhaW5zLmtvdGxpbng6a290bGlueC1jb3JvdXRpbmVzLWFuZHJvaWQ6MS44LjAiKQ0KICAgIGltcGxlbWVudGF0aW9uKCJjb20uZ29vZ2xlLmNvZGUuZ3Nvbjpnc29uOjIuMTAuMSIpDQogICAgaW1wbGVtZW50YXRpb24oImNvbS5naXRodWIuUGhpbEpheTpNUEFuZHJvaWRDaGFydDp2My4xLjAiKQ0KfQ0K
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
+}
+android {
+    namespace = "com.yourapp.accountbook"
+    compileSdk = 34
+    defaultConfig {
+        applicationId = "com.yourapp.accountbook"
+        minSdk = 26
+        targetSdk = 34
+        versionCode = 5
+        versionName = "2.0.1"
+    }
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+        dataBinding = false
+    }
+}
+dependencies {
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+}
