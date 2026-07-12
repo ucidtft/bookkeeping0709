@@ -1,1 +1,46 @@
-77u/cGFja2FnZSBjb20ueW91cmFwcC5hY2NvdW50Ym9vawppbXBvcnQgYW5kcm9pZC5hcHAuQXBwbGljYXRpb24KaW1wb3J0IGNvbS55b3VyYXBwLmFjY291bnRib29rLmRhdGEuZGIuQXBwRGF0YWJhc2UKY2xhc3MgQXBwIDogQXBwbGljYXRpb24oKSB7CiAgICB2YWwgZGF0YWJhc2U6IEFwcERhdGFiYXNlIGJ5IGxhenkgewogICAgICAgIEFwcERhdGFiYXNlLmdldEluc3RhbmNlKHRoaXMpCiAgICB9CiAgICBvdmVycmlkZSBmdW4gb25DcmVhdGUoKSB7CiAgICAgICAgc3VwZXIub25DcmVhdGUoKQogICAgICAgIGluc3RhbmNlID0gdGhpcw0KICAgICAgICAvLyBXYXJtIHVwIFJvb20gZGF0YWJhc2Ugb24gYmFja2dyb3VuZCB0aHJlYWQgZm9yIGZhc3RlciBjb2xkIHN0YXJ0DQogICAgICAgIFRocmVhZCB7IGRhdGFiYXNlIH0uc3RhcnQoKQogICAgfQogICAgY29tcGFuaW9uIG9iamVjdCB7CiAgICAgICAgbGF0ZWluaXQgdmFyIGluc3RhbmNlOiBBcHAKICAgICAgICAgICAgcHJpdmF0ZSBzZXQKICAgIH0KfQo=
+package com.yourapp.accountbook
+
+import android.app.Application
+import com.yourapp.accountbook.data.db.AppDatabase
+import com.yourapp.accountbook.util.BillExporter
+import com.yourapp.accountbook.BuildConfig
+import kotlinx.coroutines.runBlocking
+
+class App : Application() {
+
+    val database: AppDatabase by lazy {
+        AppDatabase.getInstance(this)
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        instance = this
+
+        // Warm up Room on background thread for faster cold start
+        Thread { database }.start()
+
+        // 版本升级时自动导出 CSV 备份到 Download/导出账单/auto_backup/
+        val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
+        val lastVersion = prefs.getInt("last_version_code", 0)
+        val currentVersion = BuildConfig.VERSION_CODE
+        if (currentVersion > lastVersion) {
+            Thread {
+                try {
+                    val file = runBlocking { BillExporter(this@App).exportAllToCSV() }
+                    android.util.Log.i("App", "版本升级自动备份成功: ${file.absolutePath}")
+                } catch (e: java.lang.Exception) {
+                    android.util.Log.w("App", "版本升级自动备份失败: ${e.message}")
+                }
+            }.start()
+            prefs.edit().putInt("last_version_code", currentVersion).apply()
+        }
+
+        // 统计 ping
+        com.yourapp.accountbook.util.AnalyticsHelper.trackLaunch(this)
+    }
+
+    companion object {
+        lateinit var instance: App
+            private set
+    }
+}
