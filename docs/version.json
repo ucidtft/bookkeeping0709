@@ -1,7 +1,7 @@
 {
-  "latestVersion": "2.0.1",
+  "latestVersion": "2.0.0",
   "versionCode": 4,
-  "changelog": "1. UI首页整体改版，新增分类饼图、最近账单\n2. 修复周报模式图表空白\n3. 修复底部导航跳转后首页按钮失效\n4. 新增账单导出功能\n5. 新增 11 个分类图标\n6. 布局优化\n7. 适配 Android 14\n8. 优化多周期切换图表联动刷新",
-  "downloadUrl": "https://github.com/ucidtft/bookkeeping0709/releases/download/v2.0.0/app-v2.0.0.apk",
+  "changelog": "1. UI 首页整体改版，新增分类饼图、最近账单\n2. 修复周报模式图表空白问题\n3. 修复底部导航跳转后首页按钮失效\n4. 新增账单导出功能（设置页→导出账单）\n5. 新增 11 个分类图标\n6. 布局优化，修复分隔线位置、缩减空白\n7. 适配 Android 14 分区存储\n8. 优化多周期切换图表联动刷新",
+  "downloadUrl": "https://raw.githubusercontent.com/ucidtft/bookkeeping0709/main/docs/app-v2.0.0.apk.zip",
   "forceUpdate": false
 }
