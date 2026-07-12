@@ -1,1 +1,8 @@
-cGFja2FnZSBjb20ueW91cmFwcC5hY2NvdW50Ym9vay51aS5zZXR0aW5ncw0KaW1wb3J0IGFuZHJvaWR4LmxpZmVjeWNsZS5WaWV3TW9kZWwNCg0KY2xhc3MgU2V0dGluZ3NWaWV3TW9kZWwgOiBWaWV3TW9kZWwoKSB7DQogICAgZnVuIGdldFZlcnNpb25OYW1lKCk6IFN0cmluZyA9ICIxLjAuMCINCn0NCg==
+package com.yourapp.accountbook.ui.settings
+
+import androidx.lifecycle.ViewModel
+import com.yourapp.accountbook.BuildConfig
+
+class SettingsViewModel : ViewModel() {
+    fun getVersionName(): String = BuildConfig.VERSION_NAME
+}
