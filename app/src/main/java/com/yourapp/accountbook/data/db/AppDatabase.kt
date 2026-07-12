@@ -1,1 +1,35 @@
-cGFja2FnZSBjb20ueW91cmFwcC5hY2NvdW50Ym9vay5kYXRhLmRiCmltcG9ydCBhbmRyb2lkLmNvbnRlbnQuQ29udGV4dAppbXBvcnQgYW5kcm9pZHgucm9vbS5EYXRhYmFzZQppbXBvcnQgYW5kcm9pZHgucm9vbS5Sb29tCmltcG9ydCBhbmRyb2lkeC5yb29tLlJvb21EYXRhYmFzZQppbXBvcnQgYW5kcm9pZHgucm9vbS5UeXBlQ29udmVydGVycwppbXBvcnQgY29tLnlvdXJhcHAuYWNjb3VudGJvb2suZGF0YS5kYi5jb252ZXJ0ZXIuQ29udmVydGVycwppbXBvcnQgY29tLnlvdXJhcHAuYWNjb3VudGJvb2suZGF0YS5kYi5kYW8uQmlsbERhbwppbXBvcnQgY29tLnlvdXJhcHAuYWNjb3VudGJvb2suZGF0YS5kYi5lbnRpdHkuQmlsbEVudGl0eQpARGF0YWJhc2UoZW50aXRpZXMgPSBbQmlsbEVudGl0eTo6Y2xhc3NdLCB2ZXJzaW9uID0gMSwgZXhwb3J0U2NoZW1hID0gZmFsc2UpCkBUeXBlQ29udmVydGVycyhDb252ZXJ0ZXJzOjpjbGFzcykKYWJzdHJhY3QgY2xhc3MgQXBwRGF0YWJhc2UgOiBSb29tRGF0YWJhc2UoKSB7CiAgICBhYnN0cmFjdCBmdW4gYmlsbERhbygpOiBCaWxsRGFvCiAgICBjb21wYW5pb24gb2JqZWN0IHsKICAgICAgICBAVm9sYXRpbGUKICAgICAgICBwcml2YXRlIHZhciBJTlNUQU5DRTogQXBwRGF0YWJhc2U/ID0gbnVsbAogICAgICAgIGZ1biBnZXRJbnN0YW5jZShjb250ZXh0OiBDb250ZXh0KTogQXBwRGF0YWJhc2UgewogICAgICAgICAgICByZXR1cm4gSU5TVEFOQ0UgPzogc3luY2hyb25pemVkKHRoaXMpIHsKICAgICAgICAgICAgICAgIHZhbCBpbnN0YW5jZSA9IFJvb20uZGF0YWJhc2VCdWlsZGVyKAogICAgICAgICAgICAgICAgICAgIGNvbnRleHQuYXBwbGljYXRpb25Db250ZXh0LAogICAgICAgICAgICAgICAgICAgIEFwcERhdGFiYXNlOjpjbGFzcy5qYXZhLAogICAgICAgICAgICAgICAgICAgICJhY2NvdW50Ym9vay5kYiIKICAgICAgICAgICAgICAgICkuYnVpbGQoKQogICAgICAgICAgICAgICAgSU5TVEFOQ0UgPSBpbnN0YW5jZQogICAgICAgICAgICAgICAgaW5zdGFuY2UKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KfQo=
+package com.yourapp.accountbook.data.db
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.yourapp.accountbook.data.db.converter.Converters
+import com.yourapp.accountbook.data.db.dao.BillDao
+import com.yourapp.accountbook.data.db.entity.BillEntity
+
+@Database(entities = [BillEntity::class], version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun billDao(): BillDao
+
+    companion object {
+        @Volatile
+        private var INSTANCE: AppDatabase? = null
+
+        fun getInstance(context: Context): AppDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "accountbook.db"
+                )
+                .fallbackToDestructiveMigration()  // schema不匹配时重建而非崩溃，配合自动备份使用
+                .build()
+                INSTANCE = instance
+                instance
+            }
+        }
+    }
+}
