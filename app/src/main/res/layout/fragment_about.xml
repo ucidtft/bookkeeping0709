@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background" android:padding="16dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="3" android:gravity="center">
+        <Button android:id="@+id/btn_feedback" android:layout_width="0dp" android:layout_height="44dp"
+            android:layout_weight="1" android:layout_marginEnd="4dp" android:text="建议反馈"
+            android:textSize="13sp" android:textAllCaps="false"
+            android:background="@drawable/tab_selected" android:textColor="@android:color/white" />
+        <Button android:id="@+id/btn_about" android:layout_width="0dp" android:layout_height="44dp"
+            android:layout_weight="1" android:layout_marginHorizontal="4dp" android:text="关于我们"
+            android:textSize="13sp" android:textAllCaps="false"
+            android:background="@drawable/tab_unselected" android:textColor="@color/text_primary" />
+        <Button android:id="@+id/btn_version" android:layout_width="0dp" android:layout_height="44dp"
+            android:layout_weight="1" android:layout_marginStart="4dp" android:text="版本信息"
+            android:textSize="13sp" android:textAllCaps="false"
+            android:background="@drawable/tab_unselected" android:textColor="@color/text_primary" />
+    </LinearLayout>
+
+    <!-- 建议反馈 -->
+    <com.google.android.material.card.MaterialCardView android:id="@+id/layout_feedback_content"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" app:cardCornerRadius="12dp" app:contentPadding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="建议反馈" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="如有任何建议或问题，请联系我们："
+                android:textSize="14sp" android:textColor="@color/text_primary" />
+            <TextView android:id="@+id/tv_feedback_content" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="微信: ucidt_ft" android:textSize="16sp"
+                android:textColor="@color/primary" android:textStyle="bold"
+                android:letterSpacing="0.15" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 关于我们 -->
+    <com.google.android.material.card.MaterialCardView android:id="@+id/layout_about_content2"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" app:cardCornerRadius="12dp" app:contentPadding="20dp"
+        android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="关于我们" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="简记是一款纯离线的记账应用，无登录、无广告。您的数据仅存储在本地。"
+                android:textSize="14sp" android:textColor="@color/text_primary" android:lineSpacingExtra="4dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 版本信息 -->
+    <com.google.android.material.card.MaterialCardView android:id="@+id/layout_version_content2"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" app:cardCornerRadius="12dp" app:contentPadding="20dp"
+        android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="版本信息" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+            <TextView android:id="@+id/tv_version_detail" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="12dp"
+                android:text="当前版本: v2.0.2"
+                android:textSize="16sp" android:textColor="@color/text_primary" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="最新版本: v2.0.2"
+                android:textSize="14sp" android:textColor="@color/text_secondary" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
